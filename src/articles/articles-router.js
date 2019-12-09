@@ -45,7 +45,9 @@ articlesRouter
           .location(path.posix.join(req.originalUrl, `/${article.id}`))
           .json(serializeArticle(article))
       })
-      .catch(next)
+      .catch(err => {
+        console.log(err);
+        next()
   })
 
 articlesRouter
