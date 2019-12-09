@@ -48,6 +48,7 @@ articlesRouter
       .catch(err => {
         console.log(err);
         next()
+      })
   })
 
 articlesRouter
